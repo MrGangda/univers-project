@@ -1,0 +1,25 @@
+---
+import { log } from "astro/dist/core/logger/core";
+
+const API_URL = "http://localhost:1337/api/hello-collections";
+const TOKEN = '02d174340af884f9e1ba188256484607e153c08f7c1edb0841b88d7b5b81d55d472157435e977b12c045d06364c51bc98b9c985823e667dc73082c883fb026d8092b27252daccb64a6a72288565df52010d291bbabc1f4aa6230bc9641cac0ae098257d54e3365e924f4754b57fe85b41c1a04276c61b1772a6c4ef91beb07fc'
+
+const response = await fetch(API_URL, {
+  headers: {
+    'Authorization': `Bearer ${TOKEN}`
+  }
+});
+const { data } = await response.json();
+console.log(data, 'data');
+---
+
+<section>
+  <h2>Data from Strapi</h2>
+  <ul>
+    {data.map(item => (
+      <li>
+        {item.attributes.language}: {item.attributes.greeting}
+      </li>
+    ))}
+  </ul>
+</section>
