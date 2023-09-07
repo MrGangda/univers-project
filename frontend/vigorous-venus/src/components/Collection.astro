@@ -1,8 +1,8 @@
 ---
 import { log } from "astro/dist/core/logger/core";
 
-const API_URL = "http://localhost:1337/api/hello-collections";
-const TOKEN = '02d174340af884f9e1ba188256484607e153c08f7c1edb0841b88d7b5b81d55d472157435e977b12c045d06364c51bc98b9c985823e667dc73082c883fb026d8092b27252daccb64a6a72288565df52010d291bbabc1f4aa6230bc9641cac0ae098257d54e3365e924f4754b57fe85b41c1a04276c61b1772a6c4ef91beb07fc'
+const API_URL = "http://127.0.0.1:1337/api/hello-collections";
+const TOKEN = '66753832c372e89200a86bd47c5bbc5ab2aaa44117b11d6354cc84329be654fd0d092e3fcb6f2d1f617e4d33b3681aba038d69fb6aecf675101783f5fa4dc9524981cf5597744467476d84ff3edc2dc92622154ca14c3ebd0cb2d75278dbc3d399fbe99d7b7775dbf63095505fd01fff13393d6162ede8322cf687c837510c32'
 
 const response = await fetch(API_URL, {
   headers: {
