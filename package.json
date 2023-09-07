@@ -4,8 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "install:backend": "cd backend && npm install",
+    "install:frontend": "cd frontend/vigorous-venus && npm install",
     "backend": "cd backend && npm run develop",
-    "frontend": "cd frontend && cd vigorous-venus && npm run dev",
+    "frontend": "cd frontend/vigorous-venus && npm run dev",
+    "setup": "npm run install:backend && npm run install:frontend",
     "start": "concurrently \"npm run backend\" \"npm run frontend\""
   },
   "keywords": [],
